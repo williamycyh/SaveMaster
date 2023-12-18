@@ -1,0 +1,233 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="android:windowBackground">?attr/windowBackground</item>
+    </style>
+
+    <!-- Base themes -->
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_app_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_app_dark_color</item>
+        <item name="colorAccent">@color/light_app_accent_color</item>
+        <item name="android:windowBackground">@color/savemasterdown_light_background_color</item>
+        <item name="windowBackground">@color/savemasterdown_light_background_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="cardBackground">@color/savemasterdown_light_card_background_color</item>
+        <item name="colorSubtitle">@color/md_grey_900</item>
+        <item name="toolbarColor">@color/savemasterdown_app_primary_color</item>
+        <item name="backgroundAdColor">@color/md_blue_50</item>
+        <item name="textAdColor">@color/md_blue_800</item>
+        <item name="textColor">@color/savemasterdown_app_primary_color</item>
+        <item name="savemasterdown_iconColor">@color/savemasterdown_app_primary_color</item>
+
+        <item name="savemasterdown_like">@drawable/savemasterdown_ic_like_dark_24dp</item>
+        <item name="savemasterdown_dislike">@drawable/ic_savemasterdown_dislike_dark_24dp</item>
+        <item name="savemasterdown_audio">@drawable/savemasterdown_ic_headset_dark_24dp</item>
+        <item name="savemasterdown_download">@drawable/savemasterdown_ic_download_dark_24dp</item>
+        <item name="savemasterdown_share">@drawable/savemasterdown_ic_share_dark_24dp</item>
+        <item name="savemasterdown_search">@drawable/savemasterdown_ic_search_dark_24dp</item>
+        <item name="savemasterdown_close">@drawable/savemasterdown_ic_close_dark_24dp</item>
+        <item name="savemasterdown_popup">@drawable/savemasterdown_ic_picture_in_picture_dark_24dp</item>
+        <item name="savemasterdown_expand">@drawable/savemasterdown_ic_arrow_down</item>
+        <item name="savemasterdown_collapse">@drawable/savemasterdown_ic_arrow_up</item>
+        <item name="savemasterdown_volume_off">@drawable/savemasterdown_ic_volume_off_dark_24dp</item>
+        <item name="savemasterdown_history">@drawable/savemasterdown_ic_history_color</item>
+        <item name="savemasterdown_drag_handle">@drawable/savemasterdown_ic_drag_handle_dark_24dp</item>
+        <item name="selected">@drawable/savemasterdown_ic_fiber_manual_record_dark_24dp</item>
+        <item name="search_add">@drawable/isavemasterdown_c_search_add_dark_24dp</item>
+        <item name="options">@drawable/savemasterdown_ic_more_vert_dark_24dp</item>
+        <item name="option_download">@drawable/savemasterdown_ic_more_vert_white_24dp</item>
+        <item name="play">@drawable/savemasterdown_ic_play_arrow_dark_24dp</item>
+        <item name="pause">@drawable/savemasterdown_ic_pause_dark_24dp</item>
+        <item name="settings">@drawable/savemasterdown_ic_settings_dark_24dp</item>
+        <item name="ic_channel">@drawable/savemasterdown_ic_subscriptions_color</item>
+        <item name="ic_playlist_add">@drawable/savemasterdown_ic_playlist_add_dark_24dp</item>
+        <item name="ic_playlist_check">@drawable/savemasterdown_ic_playlist_add_check_dark</item>
+        <item name="ic_switch">@drawable/savemasterdown_ic_switch_main_player_dark_24dp</item>
+        <item name="rss">@drawable/savemasterdown_ic_rss_dark_24dp</item>
+        <item name="back">@drawable/savemasterdown_ic_back_dark_24dp</item>
+        <item name="trending">@drawable/savemasterdown_ic_trending_dark_24dp</item>
+        <item name="library">@drawable/savemasterdown_ic_library_music_dark_24dp</item>
+        <item name="discover">@drawable/ic_savemasterdown_discover_dark_24dp</item>
+        <item name="rate">@drawable/savemasterdown_ic_rate_dark_24dp</item>
+        <item name="policy">@drawable/savemasterdown_ic_privacy_policy_dark_24dp</item>
+        <item name="feedback">@drawable/savemasterdown_ic_feedback_dark_24dp</item>
+        <item name="quality">@drawable/savemasterdown_ic_settings_player_dark_24dp</item>
+        <item name="caption">@drawable/savemasterdown_ic_captions_dark_24dp</item>
+        <item name="playback_speed">@drawable/savemasterdown_ic_playback_speed_dark_24dp</item>
+        <item name="done">@drawable/savemasterdown_ic_done_dark_24dp</item>
+        <item name="info">@drawable/savemasterdown_ic_info_dark_24dp</item>
+        <item name="savemasterdown_ic_download">@drawable/savemasterdown_ic_download_color</item>
+
+        <item name="savemasterdown_separator_color">@color/savemasterdown_light_separator_color</item>
+        <item name="contrast_background_color">@color/savemasterdown_light_connd_color</item>
+        <item name="queue_background_color">@color/savemasterdown_light_quckground_color</item>
+        <item name="savemasterdown_selector_drawable">@drawable/savemasterdown_light_selector</item>
+        <item name="colorControlHighlight">@color/savemasterdown_light_ripple_color</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/light_app_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_app_dark_color</item>
+        <item name="colorAccent">@color/dark_app_accent_color</item>
+        <item name="android:windowBackground">@color/savemasterdown_dark_background_color</item>
+        <item name="windowBackground">@color/savemasterdown_dark_background_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="cardBackground">@color/savemasterdown_dark_card_background_color</item>
+        <item name="colorSubtitle">@color/savemasterdown_white</item>
+        <item name="toolbarColor">@color/savemasterdown_dark_background_color</item>
+        <item name="backgroundAdColor">#252b3a</item>
+        <item name="textAdColor">@color/md_blue_400</item>
+        <item name="textColor">@color/savemasterdown_white</item>
+        <item name="savemasterdown_iconColor">@color/savemasterdown_white</item>
+
+        <item name="savemasterdown_like">@drawable/savemasterdown_ic_like_white_24dp</item>
+        <item name="savemasterdown_dislike">@drawable/ic_savemasterdown_dislike_white_24dp</item>
+        <item name="savemasterdown_audio">@drawable/savemasterdown_ic_headset_white_24dp</item>
+        <item name="savemasterdown_download">@drawable/savemasterdown_ic_download_white_24dp</item>
+        <item name="savemasterdown_share">@drawable/savemasterdown_ic_share_white_24dp</item>
+        <item name="savemasterdown_search">@drawable/ic_ssavemasterdown_earch_white_24dp</item>
+        <item name="savemasterdown_close">@drawable/ic_closesavemasterdown__white_24dp</item>
+        <item name="savemasterdown_popup">@drawable/savemasterdown_ic_pict_in_pic_white_24dp</item>
+        <item name="savemasterdown_expand">@drawable/savemasterdown_ic_arrow_down</item>
+        <item name="savemasterdown_collapse">@drawable/savemasterdown_ic_arrow_up</item>
+        <item name="savemasterdown_volume_off">@drawable/savemasterdown_ic_volume_off_white_24dp</item>
+        <item name="savemasterdown_history">@drawable/savemasterdown_ic_history_white_24dp</item>
+        <item name="savemasterdown_drag_handle">@drawable/savemasterdown_ic_drag_handle_white_24dp</item>
+        <item name="selected">@drawable/savemasterdown_ic_fier_manual_record_white_24dp</item>
+        <item name="search_add">@drawable/savemasterdown_ic_search_add_white_24dp</item>
+        <item name="options">@drawable/savemasterdown_ic_more_vert_white_24dp</item>
+        <item name="option_download">@drawable/savemasterdown_ic_more_vert_white_24dp</item>
+        <item name="play">@drawable/savemasterdown_ic_play_arrow_white_24dp</item>
+        <item name="pause">@drawable/savemasterdown_ic_pause_white_24dp</item>
+        <item name="settings">@drawable/savemasterdown_ic_settings_white_24dp</item>
+        <item name="ic_channel">@drawable/savemasterdown_ic_subscriptions_white_24dp</item>
+        <item name="ic_playlist_add">@drawable/savemasterdown_ic_playlist_add_white_24dp</item>
+        <item name="ic_playlist_check">@drawable/savemasterdown_ic_playlist_add_check_white</item>
+        <item name="ic_switch">@drawable/savemasterdown_ic_switch_main_player_white_24dp</item>
+        <item name="rss">@drawable/savemasterdown_ic_rss_white_24dp</item>
+        <item name="back">@drawable/savemasterdown_ic_back_white_24dp</item>
+        <item name="trending">@drawable/savemasterdown_ic_trending_white_24dp</item>
+        <item name="library">@drawable/savemasterdown_ic_library_music_white_24dp</item>
+        <item name="discover">@drawable/ic_discover_savemasterdown_white_24dp</item>
+        <item name="rate">@drawable/savemasterdown_ic_rate_white_24dp</item>
+        <item name="policy">@drawable/savemasterdown_ic_privacy_policy_white_24dp</item>
+        <item name="feedback">@drawable/ic_savemasterdown_feedback_white_24dp</item>
+        <item name="quality">@drawable/savemasterdown_ic_settings_player_white_24dp</item>
+        <item name="caption">@drawable/savemasterdown_ic_captions_white_24dp</item>
+        <item name="playback_speed">@drawable/savemasterdown_ic_playback_speed_white_24dp</item>
+        <item name="done">@drawable/savemasterdown_ic_done_white_24dp</item>
+        <item name="info">@drawable/savemasterdown_ic_info_white_24dp</item>
+        <item name="savemasterdown_ic_download">@drawable/savemasterdown_ic_download_white_24dp</item>
+
+        <item name="savemasterdown_separator_color">@color/savemasterdown_dark_separator_color</item>
+        <item name="contrast_background_color">@color/savemasterdown_dark_contrast_background_color</item>
+        <item name="queue_background_color">@color/savemasterdown_dark_queue_background_color</item>
+        <item name="savemasterdown_selector_drawable">@drawable/savemasterdown_dark_selector</item>
+        <item name="colorControlHighlight">@color/savemasterdown_dark_ripple_color</item>
+    </style>
+
+    <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/savemasterdown_bg_launcher</item>
+    </style>
+
+    <!-- Dialogs -->
+    <style name="LightDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/light_app_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_app_dark_color</item>
+        <item name="colorAccent">@color/light_app_accent_color</item>
+        <item name="android:colorAccent">@color/light_app_accent_color</item>
+        <item name="android:windowBackground">@color/savemasterdown_light_dialog_background_color</item>
+        <item name="windowBackground">@color/savemasterdown_light_dialog_background_color</item>
+    </style>
+
+    <style name="DarkDialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/light_app_primary_color</item>
+        <item name="colorPrimaryDark">@color/light_app_dark_color</item>
+        <item name="colorAccent">@color/dark_app_accent_color</item>
+        <item name="android:colorAccent">@color/dark_app_accent_color</item>
+        <item name="android:windowBackground">@color/savemasterdown_dark_dialog_background_color</item>
+        <item name="windowBackground">@color/savemasterdown_dark_dialog_background_color</item>
+    </style>
+
+    <!-- Settings -->
+    <style name="LightSettingsTheme" parent="LightTheme">
+        <item name="colorAccent">@color/savemasterdown_light_settings_accent_color</item>
+    </style>
+
+    <style name="DarkSettingsTheme" parent="DarkTheme">
+        <item name="colorAccent">@color/savemasterdown_white</item>
+    </style>
+
+    <style name="Toolbar.Title" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/savemasterdown_white</item>
+        <item name="subtitleTextColor">@color/savemasterdown_white</item>
+    </style>
+
+    <style name="mPopupMenu" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:dropDownHorizontalOffset">-6dp</item>
+        <item name="android:dropDownVerticalOffset">6dp</item>
+    </style>
+
+    <style name="SeekBarTheme" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/savemasterdown_app_primary_color</item>
+        <item name="colorControlNormal">@color/savemasterdown_app_second_color</item>
+    </style>
+
+    <style name="SeekBarThemeWhite" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/savemasterdown_white</item>
+        <item name="colorControlNormal">@color/savemasterdown_light_gray</item>
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/savemasterdown_bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="DarkBottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="colorAccent">@color/dark_app_accent_color</item>
+    </style>
+
+    <style name="LightBottomSheetDialog" parent="@style/Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="colorAccent">@color/dark_app_accent_color</item>
+    </style>
+
+    <style name="RadioButtonTheme" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="colorControlActivated">@color/savemasterdown_app_primary_color</item>
+        <item name="colorControlNormal">#747474</item>
+    </style>
+
+    <style name="ProgressBarTheme" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:colorAccent">@color/savemasterdown_app_primary_color</item>
+        <item name="android:colorControlActivated">@color/savemasterdown_app_primary_color</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorAccent">@color/savemasterdown_app_primary_color</item>
+    </style>
+
+    <style name="RatingBarTheme" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlNormal">@color/savemasterdown_dark</item>
+        <item name="colorControlActivated">@color/savemasterdown_app_primary_color</item>
+    </style>
+
+    <style name="App.TextAppearance.Design.Tab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+</resources>

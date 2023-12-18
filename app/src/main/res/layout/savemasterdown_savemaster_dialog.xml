@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="smsmsm"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:text="Save Master"/>
+
+    <View
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cccccc"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:text="Save Master Site (https://savemaster.net) online now. You can download video from Youtube/Facebook/Ins and all."/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--<Button
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/musicplayerdowner_up_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="#000000"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Got It"
+            android:id="@+id/cancel"/>-->
+        <Button
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/savemasterdown_download_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:text="Got it"
+            android:id="@+id/action_btn"/>
+    </LinearLayout>
+
+</LinearLayout>

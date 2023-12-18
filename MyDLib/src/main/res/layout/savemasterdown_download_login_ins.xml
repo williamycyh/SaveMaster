@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="smsmsm"
+    android:orientation="vertical">
+
+
+    <WebView
+         android:id="@+id/webview_login"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+    <!--<ImageView
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_black" />
+-->
+
+</RelativeLayout>

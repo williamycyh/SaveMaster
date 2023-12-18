@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:tag="smsmsm"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="@string/select_the_savemasterdown_ne_dosent_work" />
+
+    <Button
+        android:id="@+id/dig_btn_met0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/savemasterdown_download_btn"
+        android:text="@string/alidownsavemasterdown_laodmethode_0"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/dig_btn_met1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/savemasterdown_download_btn"
+        android:text="@string/savemasterdown_hode_1"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/dig_btn_met2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/savemasterdown_download_btn"
+        android:text="@string/savemasterdown_"
+        android:layout_marginBottom="15dp"
+
+        android:textColor="@color/white" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/dig_btn_met3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/savemasterdown_download_btn"
+        android:text="@string/metsavemasterdown_hode_3"
+        android:layout_marginBottom="15dp"
+
+        android:textColor="@color/white" />
+    <!--
+            <Button
+                android:id="@+id/dig_btn_met4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_bg_download_screen"
+                android:text="@string/methode_4"
+                android:layout_marginBottom="15dp"
+
+                android:textColor="@color/white" />-->
+
+
+    <Button
+        android:id="@+id/dig_btn_cancel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorNegative"
+        android:background="@drawable/savemasterdown_haperound"
+        android:text="Cancel"
+        android:textColor="@color/white" />
+
+</LinearLayout>

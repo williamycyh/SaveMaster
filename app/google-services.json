@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "500747949371",
+    "project_id": "videodw-3fe80",
+    "storage_bucket": "videodw-3fe80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500747949371:android:497484e5e123d20156d31e",
+        "android_client_info": {
+          "package_name": "save.from.net.tubevideodownloader.savefrom.net"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500747949371-0n35g7imlogpsu1captoq8o9crtmpv9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa8noP578J14nmuUhu02PiNULj1CkdSgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500747949371-0n35g7imlogpsu1captoq8o9crtmpv9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,457 @@
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'applovin-quality-service'
+applovin {
+    apiKey "replace your key"
+}
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven { url "https://fan-adn.github.io/nendSDK-Android-lib/library" }
+    }
+
+    dependencies {
+
+    }
+}
+
+repositories {
+    flatDir {
+        dirs '../ExternalAAR', '../../libs'
+    }
+    google()
+    mavenCentral()
+    maven { url "https://artifactory.bidmachine.io/bidmachine" }
+    maven { url "https://android-sdk.is.com" }
+    maven { url "https://imobile-maio.github.io/maven" }
+    maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+    maven { url "https://fan-adn.github.io/nendSDK-Android-lib/library" }
+    maven { url "https://maven.ogury.co" }
+    maven { url "https://artifact.bytedance.com/repository/pangle" }
+    maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
+    maven { url "https://sdk.tapjoy.com" }
+    maven { url "https://verve.jfrog.io/artifactory/verve-gradle-release" }
+    maven { url "https://artifactory.yahooinc.com/artifactory/maven" }
+
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion '30.0.3'
+    flavorDimensions 'default'
+
+    defaultConfig {
+        applicationId "save.from.net.tubevideodownloader.savefrom.net"
+        minSdkVersion 23 // Android 6.0
+        targetSdkVersion 33
+
+        // Needs to increase the [versionName] & [versionCode] when release on Play Store
+        versionCode 300012
+        versionName "3.1.2"
+        buildConfigField("int", "first_release_version", "10100")
+        buildConfigField("String", "first_release_date", '"2022-10-27"')
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'replace your key'
+            keyPassword 'replace your key'
+            storeFile file('replace your key')
+            storePassword 'replace your key'
+        }
+    }
+
+    buildTypes {
+        debug {
+            multiDexEnabled true
+            debuggable true
+            signingConfig signingConfigs.releaseConfig
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            zipAlignEnabled true
+            multiDexEnabled true
+            proguardFiles 'proguard-android.txt'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+//    productFlavors {
+//        develop {
+//            resConfigs 'xxhdpi'
+//        }
+//        production {
+//
+//        }
+//    }
+
+
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+        encoding 'utf-8'
+    }
+
+    // speed up builds, pass Compiler Command-line Options: -PdevBuild
+    if (project.hasProperty('devBuild')) {
+
+        // disable splits
+        splits.abi.enable = false
+        splits.density.enable = false
+
+        // disable PNG crunching
+        aaptOptions.cruncherEnabled = false
+    }
+
+    // enable language, density, and abi configuration splits
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+
+    configurations {
+        all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.savemaster.savefromfb'
+}
+
+ext {
+    exoPlayerVersion = '2.11.8'
+    roomVersion = '2.4.2'
+    okHttpVersion = '4.9.0'
+    icepickVersion = '3.2.0'
+    markwonVersion = '4.6.2'
+
+    //NewPipeExtractor
+    nanojsonVersion = "1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751"
+    spotbugsVersion = "4.6.0"
+    junitVersion = "5.8.2"
+    checkstyleVersion = "9.3" // do not use latest version (10.0) as it requires compile JDK 11
+}
+dependencies {
+    implementation 'com.android.billingclient:billing:5.0.0'
+
+    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.applovin.mediation:inmobi-adapter:+'
+    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.android.support:recyclerview-v7:28.+'
+    implementation 'com.android.support:customtabs:28.+'
+    implementation 'com.applovin.mediation:mintegral-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation 'com.applovin.mediation:unityads-adapter:+'
+
+//    implementation 'com.applovin.mediation:adcolony-adapter:+'
+//    implementation 'com.applovin.mediation:amazon-tam-adapter:+'
+//    implementation 'com.amazon.android:aps-sdk:+'
+//    implementation 'com.applovin.mediation:bidmachine-adapter:+'
+//    implementation 'com.applovin.mediation:chartboost-adapter:+'
+//    implementation 'com.google.android.gms:play-services-base:16.1.0'
+//    implementation 'com.applovin.mediation:criteo-adapter:+'
+//    implementation 'com.applovin.mediation:fyber-adapter:+'
+//    implementation 'com.applovin.mediation:google-ad-manager-adapter:+'
+//    implementation 'com.applovin.mediation:google-adapter:+'
+//    implementation 'com.applovin.mediation:hyprmx-adapter:+'
+//    implementation 'com.applovin.mediation:ironsource-adapter:+'
+//    implementation 'com.applovin.mediation:line-adapter:+'
+//    implementation 'com.applovin.mediation:maio-adapter:+'
+//    implementation 'com.applovin.mediation:mytarget-adapter:+'
+//    implementation 'com.applovin.mediation:nend-adapter:+'
+//    implementation 'com.applovin.mediation:ogury-presage-adapter:+'
+//    implementation 'com.applovin.mediation:bytedance-adapter:+'
+//    implementation 'com.applovin.mediation:smaato-adapter:+'
+//    implementation 'com.applovin.mediation:tapjoy-adapter:+'
+//    implementation 'com.applovin.mediation:verve-adapter:+'
+//    implementation 'com.applovin.mediation:vungle-adapter:+'
+//    implementation 'com.applovin.mediation:verizonads-adapter:+'
+//    implementation 'com.applovin.mediation:yandex-adapter:+'
+
+    // Originally in NewPipeExtractor
+    implementation files('libs/extractor-v0.22.1.jar')
+    implementation files('libs/timeago-parser-v0.22.1.jar')
+//    implementation 'com.github.TeamNewPipe:NewPipeExtractor:v0.22.1'
+    implementation "com.github.TeamNewPipe:nanojson:$nanojsonVersion"
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'org.mozilla:rhino:1.7.13'
+    implementation "com.github.spotbugs:spotbugs-annotations:$spotbugsVersion"
+    implementation 'org.nibor.autolink:autolink:0.10.0'
+
+    // androidx
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //noinspection GradleDependency
+//    implementation "com.google.android.exoplayer:exoplayer:2.11.8"
+    implementation('com.google.android.exoplayer:exoplayer') {
+        version {
+            strictly '2.11.8'
+        }
+    }
+//    implementation('com.google.android.exoplayer:exoplayer-common') {
+//        version {
+//            strictly '2.12.0'
+//        }
+//    }
+    implementation('com.google.android.exoplayer:exoplayer-core') {
+        version {
+            strictly '2.11.8'
+        }
+    }
+    implementation('com.google.android.exoplayer:exoplayer-hls') {
+        version {
+            strictly '2.11.8'
+        }
+    }
+    //noinspection GradleDependency
+//    implementation "com.google.android.exoplayer:extension-mediasession:2.11.8"
+    implementation('com.google.android.exoplayer:extension-mediasession') {
+        version {
+            strictly '2.11.8'
+        }
+    }
+
+    // for Pair
+    implementation 'org.apache.commons:commons-lang3:3.10'
+    
+    // retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.6.2'
+    //noinspection GradleDependency
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    //noinspection GradleDependency
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+
+    // rxjava
+    implementation 'io.reactivex:rxjava:1.3.8'
+    implementation 'com.artemzin.rxjava:proguard-rules:1.3.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    
+    // rxjava2
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    
+    // rxbinding2
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    implementation 'org.ocpsoft.prettytime:prettytime:5.0.2.Final'
+
+    //noinspection GradleDependency
+    implementation "androidx.room:room-runtime:$roomVersion"
+    //noinspection GradleDependency
+    implementation "androidx.room:room-rxjava2:$roomVersion"
+
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+
+    implementation "frankiesardo:icepick:$icepickVersion"
+    annotationProcessor "frankiesardo:icepick-processor:$icepickVersion"
+
+    // google services
+//    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    
+    // firebase
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-config:21.2.0'
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    
+    // image loader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    
+    // bottom navigation
+    implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
+
+    // butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    // stream java8
+    implementation 'com.annimon:stream:1.2.2'
+
+    // chrome custom tabs
+    //noinspection GradleDependency
+    implementation 'androidx.browser:browser:1.3.0'
+
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation project(path: ':MyDLib')
+    // permission
+    implementation 'pub.devrel:easypermissions:2.0.1'
+    
+    // google api
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation('com.google.api-client:google-api-client-android:1.32.1') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-youtube:v3-rev99-1.17.0-rc') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+
+    // utility
+    implementation 'com.darwinsys:hirondelle-date4j:1.5.1'
+    implementation 'org.apache.commons:commons-text:1.8'
+    
+    // markwon
+    implementation "io.noties.markwon:core:${markwonVersion}"
+    implementation "io.noties.markwon:linkify:${markwonVersion}"
+
+    // file picker
+    implementation 'com.nononsenseapps:filepicker:4.2.1'
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+//    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+}
+
+project.tasks.whenTaskAdded {Task theTask ->
+
+    if (theTask.name == 'bundleRelease') {
+        //1.先构建appbundle
+        //2.aab---->apks
+        //3.将apks安装到连接的设备上
+        theTask.doLast {
+            new BundleToApksThenInstall().bundleToApks(project)
+        }
+    }
+
+}
+
+
+class BundleToApksThenInstall {
+
+    def bundleToApks(Project project) {
+
+        // /app/outputs/bundle/release/app-release.aab
+        File aabFile=findAABFile(project)
+        if (aabFile==null)return
+        String aabPath=aabFile.path
+        //app-release
+        String aabName=aabPath.substring(aabPath.lastIndexOf("/")+1,aabPath.lastIndexOf("."))
+
+        // /build/app/outputs/apks
+        File apksDir=makeApksDir(project)
+
+//        File apksFile=new File(apksDir,"/${aabName}.apks")
+//        if (apksFile.exists()){
+//            apksFile.delete()
+//        }
+
+        File keyStoreFile=keyStoreFile(project)
+
+        if (aabFile!=null&&aabFile.exists()){
+
+
+            project.exec {
+                workingDir = project.file('../bundletool')
+                def commands = []
+                commands << 'bash'
+                commands << '-c'
+                commands << "java -jar bundletool-all-1.7.0.jar " +
+                        "build-apks --bundle=${aabFile} " +
+                        "--output=${apksDir}/${aabName}.apks " +
+                        "--overwrite" +
+                        " --ks=${keyStoreFile.path} " +
+                        "--ks-pass=pass: replace your key" +
+                        "--ks-key-alias=  replace your key" +
+                        "--key-pass=pass: replace your key"
+
+                commandLine = commands
+            }
+
+            try {
+                project.exec {
+                    workingDir = project.file('../bundletool')
+                    def commands = []
+                    commands << 'bash'
+                    commands << '-c'
+                    commands << "java -jar bundletool-all-1.7.0.jar " +
+                            "install-apks" +
+                            " --apks=${apksDir}/${aabName}.apks "
+
+                    commandLine = commands
+                }
+            }catch(exception){
+                ///没有连接设备
+                print("exception----->${exception}")
+            }
+        }
+    }
+
+    File  makeApksDir(Project project){
+
+        //  /Users/zhantaohu/AndroidStudioProjects/financial_unicorn
+        File rootFile=project.file('..')
+        File outputsFile= new File(rootFile,'/app/build/outputs/')
+
+        File apksFile=new File(outputsFile,"apks")
+        if (!apksFile.exists()){
+            apksFile.mkdirs()
+        }
+
+        return apksFile
+    }
+
+    File findAABFile(Project project){
+
+        //  /Users/zhantaohu/AndroidStudioProjects/financial_unicorn
+        File rootFile=project.file('..')
+        File build= new File(rootFile,'/app/build/outputs/bundle/release')
+        File aabFile=null
+        File[] files=build.listFiles()
+
+        if (files.size()>0){
+
+            for (int index=0;index<files.size();index++){
+                aabFile=files[index]
+                if (aabFile.path.endsWith(".aab")){
+                    return aabFile
+                }
+            }
+        }
+        return aabFile
+    }
+
+
+    File keyStoreFile(Project project){
+        //  /Users/zhantaohu/AndroidStudioProjects/financial_unicorn
+        File rootFile=project.file('..')
+        File keystoreFile= new File(rootFile,'/app/replace your key')
+        return keystoreFile
+    }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:layout_centerVertical="true"
+    android:tag="smsmsm"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="58dp"
+       android:orientation="vertical"
+       android:gravity="center_vertical">
+      <TextView
+          android:layout_marginStart="12dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:maxLines="1"
+          android:textSize="16sp"
+          android:textColor="#333333"
+          android:id="@+id/video_info" />
+
+      <TextView
+          android:visibility="gone"
+          android:id="@+id/desc"
+          android:layout_marginStart="12dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="12sp"
+          android:textColor="#C3963A"
+          android:text="Audio will merge later"/>
+   </LinearLayout>
+
+
+   <!--<TextView
+       android:id="@+id/pro_version"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="12dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/pro_btn"
+       android:textColor="#ffffff"
+       android:text="PRO"/>-->
+
+</LinearLayout>
+

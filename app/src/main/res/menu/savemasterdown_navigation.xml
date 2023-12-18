@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!-- <item
+        android:tag="smsmsm"
+        android:id="@+id/navigation_trending"
+        android:icon="?attr/trending"
+        android:title="@string/savemasterdown_trending" />-->
+
+    <item
+        android:id="@+id/navigation_discover"
+        android:icon="?attr/discover"
+        android:title="@string/savemasterdown_discover" />
+
+    <item
+        android:id="@+id/navigation_library"
+        android:icon="?attr/library"
+        android:title="@string/savemasterdown_library" />
+
+</menu>

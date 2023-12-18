@@ -1,0 +1,57 @@
+<resources>
+
+    <string name="dsavemasterdown_ownload_path" translatable="false">video_master_download</string>
+
+    <string name="alidownsavemasterdown_laodmethode_0">Methode 1</string>
+    <string name="savemasterdown_hode_1">Methode 2</string>
+    <string name="savemasterdown_">Methode 3</string>
+    <string name="metsavemasterdown_hode_3">Methode 4</string>
+    <string name="metsavemasterdown_hode_4">Methode 5</string>
+    <string name="methsavemasterdown_ode_5">Methode 6</string>
+    <string name="itesavemasterdown_mowned">Item Owned</string>
+    <string name="nodesavemasterdown_ifittakeslonger">Loading.... Note if it takes longer then 1 min close the app and retry</string>
+    <string name="presssavemasterdown_again">Please press again to exit</string>
+    <string name="dosavemasterdown_wnload">Download</string>
+    <string name="videosavemasterdown_s_text"><font color='#FF0400'><i>Videos :</i></font></string>
+    <string name="titsavemasterdown_le">Title</string>
+    <string name="dursavemasterdown_ation">Duration</string>
+    <string name="sosavemasterdown_urce">Source</string>
+    <string name="ressavemasterdown_olution">Resolution</string>
+    <string name="filsavemasterdown_esize">FileSize</string>
+    <string name="nostosavemasterdown_ryfound">No insta Story Found</string>
+    <string name="storisavemasterdown_es">Stories</string>
+    <string name="select_the_savemasterdown_ne_dosent_work">Select the desired method to download, try the other one if one doesn\'t work</string>
+    <string name="plsavemasterdown_ease_wait">Please wait</string>
+    <string name="downsavemasterdown_new_version">Downloading new version...</string>
+
+    <string name="savemasterdown_newupdate">New Update!!!!</string>
+    <string name="savemasterdown_lotsofnewfeature">Lots of new features!! upgrade to the new version.</string>
+    <string name="savemasterdown_android11usermessage">(Compulsory) If you have done it already then CANCEL it. Android 11 or above users will have to download the Android 11 or above version for Whatsapp status saver to work and will have to give a new permission manage storage for Whatsapp status saver to work, so kindly do that.</string>
+    <string name="grasavemasterdown_ntpper">Grant</string>
+    <string name="savemasterdown_extract">You Have To Give Apk Install Permission For That</string>
+    <string name="savemasterdown_apkinstall">Apk Install</string>
+    <string name="savemasterdown_version">version</string>
+    <string name="methosavemasterdown_de_6">Methode 6</string>
+
+    <string name="confirsavemasterdown_m_download">Confirm to download this video?</string>
+    <string name="mersavemasterdown_ge_tips">* Will Merge Audio after download.</string>
+    <string name="savemasterdown_merge_failed">Audio Merge failed, Download other resolution pls.</string>
+    <string name="audiosavemasterdown__on">Audio/Music</string>
+    <string name="vidsavemasterdown_eo">Video</string>
+    <string name="start_savemasterdown_downloading">Start downloading</string>
+    <string name="savemasterdown_voice_merged">Audio merge successful</string>
+
+    <string name="methosavemasterdown_d_local">Local</string>
+    <string name="methodsavemasterdown__local_2">Local 2</string>
+    <string name="methsavemasterdown_od_third">Website</string>
+    <string name="methsavemasterdown_od_server">Server</string>
+    <string name="logisavemasterdown_nfirst">You need to login first to get results</string>
+    <string name="selecsavemasterdown_t_quality">Select Quality</string>
+    <string name="savemasterdown_down_notification_title">Downloading...</string>
+    <string name="download_nsavemasterdown_otification_description">Downloading new version</string>
+    <string name="pleasavemasterdown_se_install">Please install</string>
+    <string name="downloasavemasterdown_d_from_store">Download from store</string>
+    <string name="clicktsavemasterdown_odownload">Click Here To Download</string>
+
+
+</resources>
